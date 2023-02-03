@@ -4,8 +4,6 @@
 
 This package was built to manage recurrent functionalities during development of interfaces. The idea is to allow a developer collect these user data and use as appropriately say built a dashboard to manage the data and subesequently make informed decisions. E.g. these data can be collected and sent to the server for analytics purposes. So, a developer can quickly :
 
-, , , ,
-
 - get a user Location (Country) by using the `useGetUserCountry` Hook.
 - get a user Location (City) by using the `useGetUserCity` Hook.
 - get the type of Device (mobile/desktop) a user is using to access the application by using the `useUserDevice` Hook.
