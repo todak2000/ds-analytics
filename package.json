@@ -1,6 +1,6 @@
 {
-  "name": "ds-analytics",
-  "version": "1.0.1",
+  "name": "@todak2000/react-user-analytics",
+  "version": "1.0.2",
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "files": [
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/todak2000/ds-analytics.git"
+    "url": "git+https://github.com/todak2000/react-user-analytics.git"
   },
   "keywords": [
     "React",
@@ -27,21 +27,19 @@
   "author": "Daniel Olagunju",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/todak2000/ds-analytics/issues"
+    "url": "https://github.com/todak2000/react-user-analytics/issues"
   },
-  "homepage": "https://github.com/todak2000/ds-analytics#readme",
+  "homepage": "https://github.com/todak2000/react-user-analytics#readme",
   "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-node-resolve": "^11.2.1",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
     "@types/jest": "^24.9.1",
-    "@types/react": "^16.14.14",
+    "@types/react": "^18.0.27",
     "@types/react-dom": "^16.9.14",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^8.2.2",
@@ -59,8 +57,11 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
-    "chart.js": "^4.2.0",
-    "postcss": "^8",
-    "react-chartjs-2": "^5.2.0"
+    "postcss": "^8"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
+
+

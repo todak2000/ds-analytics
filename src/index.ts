@@ -1,11 +1,13 @@
-import BarChart from "./BarChart";
-import { getUserCountry } from "./Functions/getUserCountry";
-import { getUserVisitation } from "./Functions/getUserVisitation";
-import { getUserNavigation } from "./Functions/getUserNavigation";
-import { getUserDevice } from "./Functions/getUserDevice";
-export { BarChart, 
-    getUserCountry, 
-    getUserVisitation, 
-    getUserNavigation, 
-    getUserDevice 
+import { useGetUserCountry } from "./Functions/getUserCountry";
+import { useGetUserCity } from "./Functions/getUserCity";
+import { useIsUserUnique } from "./Functions/getUserVisitation";
+import { useUserNavigation } from "./Functions/getUserNavigation";
+import { useUserDevice } from "./Functions/getUserDevice";
+export {  
+    useGetUserCountry, 
+    useGetUserCity,
+    useUserDevice,
+    useIsUserUnique, 
+    useUserNavigation, 
+
 };

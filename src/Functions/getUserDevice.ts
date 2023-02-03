@@ -1,6 +1,17 @@
-export const getUserDevice = (): string => {
-    const device = navigator.userAgent;
-    const isMobileDevice = /android|iphone|kindle|ipad/i.test(device);
+import React, {useState, useEffect} from 'react';
 
-    return isMobileDevice ? 'mobile' : 'desktop';
-};
+export const useUserDevice = ():string =>{
+    const [device, setDevice] = useState<string>("")
+
+    useEffect(() => {
+      const device = navigator.userAgent;
+      const isMobileDevice = /android|iphone|kindle|ipad/i.test(device);
+
+      const userDevice = isMobileDevice ? 'mobile': 'desktop';
+      setDevice(userDevice)
+
+    }, [])
+
+    return device;
+    
+}

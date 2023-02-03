@@ -1,22 +1,22 @@
 
 import React, { useEffect, useState } from 'react';
 
-export const useGetUserCountry = () => {
-  const [country, setCountry] = useState<string | null>(null);
+export const useGetUserCity = () => {
+  const [city, setCity] = useState<string | null>(null);
 
   useEffect(() => {
-    const getCountry = async () => {
+    const getCity = async () => {
       try {
         const result = await fetch("http://ip-api.com/json");
         const res = await result.json();
-        setCountry(res?.country ?? null);
+        setCity(res?.city ?? null);
       } catch (error) {
         console.error('Error:', error);
-        setCountry(null);
+        setCity(null);
       }
     };
-    getCountry();
+    getCity();
   }, []);
 
-  return country;
+  return city;
 };
