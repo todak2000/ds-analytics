@@ -1,6 +1,6 @@
 {
   "name": "@todak2000/react-user-analytics",
-  "version": "1.0.6-b",
+  "version": "1.0.6-b.0",
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "files": [
