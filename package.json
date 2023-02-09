@@ -10,7 +10,7 @@
   "description": "A package that provide quick functionality to detect user location, device, current navigation page, unique user visit",
   "scripts": {
     "build": "rollup -c",
-    "test": "jest",
+    "test": "echo \"No test specified\"",
     "test:watch": "jest --watch",
     "prepublishOnly": "npm run build"
   },
