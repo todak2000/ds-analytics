@@ -1,6 +1,6 @@
 {
   "name": "@todak2000/react-user-analytics",
-  "version": "1.0.5",
+  "version": "1.0.6-b",
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "files": [
@@ -57,6 +57,7 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
+    "np": "^7.6.3",
     "postcss": "^8",
     "react-router-dom": "^6.8.1"
   },

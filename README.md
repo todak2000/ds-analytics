@@ -4,11 +4,12 @@
 
 This package was built to manage recurrent functionalities during development of interfaces. The idea is to allow a developer collect these user data and use as appropriately say built a dashboard to manage the data and subesequently make informed decisions. E.g. these data can be collected and sent to the server for analytics purposes. So, a developer can quickly :
 
-- get a user Location (Country) by using the `useGetUserCountry` Hook.
-- get a user Location (City) by using the `useGetUserCity` Hook.
+- get a user Location (Country and City) by using the `useGetUserLocation` Hook.
 - get the type of Device (mobile/desktop) a user is using to access the application by using the `useUserDevice` Hook.
 - get a user current navigation page by using the `useUserNavigation` Hook.
 - check if a is a unique visitor or otherwise by using the `useIsUserUnique` Hook.
+
+NB: `useIsUserUnique` is just client side and that clearing the localstorage invaidates someone as a unique user and that server implementation is recommended.
 
 ## Quickstart
 
@@ -25,8 +26,7 @@ Then, import and use any of the functionalities you might require:
 ```
 ...
 import {
-  useGetUserCountry,
-  useGetUserCity,
+  useGetUserLocation,
   useUserDevice,
   useIsUserUnique,
   useUserNavigation,
@@ -34,8 +34,7 @@ import {
 
 function SampleApp() {
 
-  const city:string = useGetUserCity();
-  const country:string = useGetUserCountry();
+  const {country, city} = useGetUserLocation();
   const uniqueUser:boolean = useIsUserUnique();
   const nav: string = useUserNavigation();
   const device: string = useUserDevice();
