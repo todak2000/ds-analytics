@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
-export const useIsUserUnique = (): boolean =>{
+function useIsUserUnique(): boolean {
   const [isUserUnique, setIsUserUnique] = useState<boolean>(false)
 
   useEffect(() => {
@@ -8,7 +8,6 @@ export const useIsUserUnique = (): boolean =>{
 
     const uniqueUser = localStorage.getItem('isUniqueUser');
     if (uniqueUser === null) {
-      localStorage.setItem('isUniqueUser', JSON.stringify(true))
       setIsUserUnique(true)
     }
     else{
@@ -21,3 +20,22 @@ export const useIsUserUnique = (): boolean =>{
   
   return isUserUnique;
 }
+export default useIsUserUnique;
+
+
+  // const uniqueUser = ()=>{
+  //   if (typeof window === 'undefined') return 
+
+  //   const uniqueUse = localStorage.getItem('isUniqueUser');
+  //   if (uniqueUse === null) {
+  //     localStorage.setItem('isUniqueUser', JSON.stringify(true))
+  //     // setIsUserUnique(true)
+  //     return true
+  //   }
+  //   else{
+  //     // localStorage.setItem('isUniqueUser', JSON.stringify(false))
+  //     // setIsUserUnique(false)
+  //     return false
+  //   }
+
+  // }

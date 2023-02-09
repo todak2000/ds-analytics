@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
-export const useUserDevice = ():string =>{
+function useUserDevice(): string {
     const [device, setDevice] = useState<string>("")
 
     useEffect(() => {
@@ -15,3 +15,4 @@ export const useUserDevice = ():string =>{
     return device;
     
 }
+export default useUserDevice;

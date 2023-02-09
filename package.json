@@ -1,6 +1,6 @@
 {
   "name": "@todak2000/react-user-analytics",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "files": [
@@ -57,12 +57,10 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
-    "postcss": "^8"
+    "postcss": "^8",
+    "react-router-dom": "^6.8.1"
   },
   "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   }
 }
-
-

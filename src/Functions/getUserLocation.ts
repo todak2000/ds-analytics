@@ -1,8 +1,9 @@
 
 import React, { useEffect, useState } from 'react';
 
-export const useGetUserCountry = () => {
-  const [country, setCountry] = useState<string | null>(null);
+function useGetUserLocation(): {city:string, country:string}{
+  const [country, setCountry] = useState<string>("");
+  const [city, setCity] = useState<string>("");
 
   useEffect(() => {
     const getCountry = async () => {
@@ -10,13 +11,16 @@ export const useGetUserCountry = () => {
         const result = await fetch("http://ip-api.com/json");
         const res = await result.json();
         setCountry(res?.country ?? null);
+        setCity(res?.city ?? null);
       } catch (error) {
         console.error('Error:', error);
-        setCountry(null);
       }
     };
     getCountry();
   }, []);
 
-  return country;
-};
+  return {country, city};
+}
+
+export default useGetUserLocation
+
